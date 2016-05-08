@@ -1,15 +1,12 @@
-"repository": {
-  "type": "git",
-  "url": "git://github.com/mjcarroll93/repository.git"
-}
-
-
-
-
-
 {
   "name": "socket-chat-example",
   "version": "0.0.1",
   "description": "my first socket.io app",
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.10.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mjcarroll93/chat-example.git"
+  }
 }
