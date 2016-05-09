@@ -81,16 +81,26 @@
 
   <script>
 
-    var name = prompt("Whats your name");
+  var name = prompt("Whats your name");
   var socket = io();
 
   if(name == ""){
-    $('form button').preventDefault();
+    $('form button').click(function(event){
+      event.preventDefault();
+    });
   }else{
+
     $('form').submit(function(){
+      if($('form input').val() ==""){
+        $('form button').click(function(event){
+          event.preventDefault();
+        });
+        alert("you can't input blank text.")
+      }else{
         socket.emit('chat message', name + " : " + $('#m').val());
-      $('#m').val('');
-      return false;
+        $('#m').val('');
+        return false;
+      }
     });
   }
 
