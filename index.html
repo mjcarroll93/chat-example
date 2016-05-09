@@ -8,8 +8,29 @@
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body { font: 13px Helvetica, Arial; }
       form { background: rgb(51, 171, 125); padding: 3px; position: fixed; bottom: 0; width: 100%;font-size: 30px;}
-      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-      form button { width: 9%; background: rgb(51, 171, 125); border: none; padding: 10px; }
+      form input {
+        border: 0;
+        padding: 10px;
+        width: 90%;
+        margin-right: .5%;
+        font-size: 30px;
+        font-family: 'Raleway', sans-serif;
+        color:
+        letter-spacing: 2px;
+        color: rgb(78, 91, 108);
+        font-weight: 100;
+      }
+      form button {
+        width: 9%;
+        background: rgb(51, 171, 125);
+        border: none; padding: 10px;
+        font-size: 20px;
+        color:white;
+        font-family: 'Raleway', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 100;
+      }
       #messages {
         list-style-type: none;
         margin: 0;
@@ -19,8 +40,22 @@
         font-weight: 100
        }
 
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee; }
+      #messages li {
+        padding: 5px 10px;
+      }
+      #messages li:nth-child(odd) {
+         background: #eee;
+      }
+      #messages li:first-child {
+        padding-top: 75px;
+      }
+      header{
+        position: fixed;
+        width:100%;
+
+        margin-bottom: 75px;
+        background: rgb(78, 91, 108);
+      }
       header #head_text{
         font-weight: 100;
         font-family: 'Raleway', sans-serif;
@@ -28,7 +63,7 @@
         font-size: 60px;
         text-align: center;
         border-bottom: #fff 3px dashed;
-        background: rgb(78, 91, 108);
+
       }
     </style>
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
