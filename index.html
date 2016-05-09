@@ -7,23 +7,43 @@
 
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body { font: 13px Helvetica, Arial; }
-      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form { background: rgb(51, 171, 125); padding: 3px; position: fixed; bottom: 0; width: 100%;font-size: 30px;}
       form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-      #messages { list-style-type: none; margin: 0; padding: 0; }
+      form button { width: 9%; background: rgb(51, 171, 125); border: none; padding: 10px; }
+      #messages {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        font-size: 40px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 100
+       }
 
       #messages li { padding: 5px 10px; }
       #messages li:nth-child(odd) { background: #eee; }
-
+      header #head_text{
+        font-weight: 100;
+        font-family: 'Raleway', sans-serif;
+        color: rgb(51, 171, 125);
+        font-size: 60px;
+        text-align: center;
+        border-bottom: #fff 3px dashed;
+        background: rgb(78, 91, 108);
+      }
     </style>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
   </head>
   <body>
+  <header>
+    <h1 id="head_text">The-<span>Q</span></h1>
+  </header>
     <ul id="messages"></ul>
     <form action="">
       <input id="m" autocomplete="on" /><button>Send</button>
     </form>
     <script src="/socket.io/socket.io.js"></script>
   <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
   <script>
     var socket = io();
     $('form').submit(function(){
