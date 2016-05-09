@@ -83,13 +83,18 @@
 
     var name = prompt("Whats your name");
   var socket = io();
-  $('form').submit(function(){
-    if(name == ""){
-    socket.emit('chat message', name + " : " + $('#m').val());
+
+  if(name == ""){
+    $('form button').preventDefault();
+  }else{
+    $('form').submit(function(){
+        socket.emit('chat message', name + " : " + $('#m').val());
+      $('#m').val('');
+      return false;
+    });
   }
-    $('#m').val('');
-    return false;
-  });
+
+
 
 
   socket.on('chat message', function(msg){
