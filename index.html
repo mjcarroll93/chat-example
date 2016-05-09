@@ -84,8 +84,9 @@
     var name = prompt("Whats your name");
   var socket = io();
   $('form').submit(function(){
-
+    if(name == ""){
     socket.emit('chat message', name + " : " + $('#m').val());
+  }
     $('#m').val('');
     return false;
   });
